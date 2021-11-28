@@ -18,8 +18,8 @@ app.engine(
   ".hbs",
   exhb({
     defaultLayout: "main",
-    layoutsDir: path.join(app.get("views", "layouts")), //layouts path concatenation
-    partialsDir: path.join(app.get("views", "partials")), //partials path concatenation "like contact me or footer"
+    layoutsDir: path.join(app.get("views"), "layouts"), //layouts path concatenation
+    partialsDir: path.join(app.get("views"), "partials"), //partials path concatenation "like contact me or footer"
     extname: ".hbs",
   })
 );
