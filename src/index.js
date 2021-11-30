@@ -39,6 +39,7 @@ app.use(require("./routes/notes"));
 app.use(require("./routes/users"));
 
 /* ------------------------------Static Files------------------------------ */
+app.get(express.static(path.join(__dirname), "public"));
 
 /* ------------------------------Server listening------------------------------ */
 app.listen(app.get("port"), () => {
