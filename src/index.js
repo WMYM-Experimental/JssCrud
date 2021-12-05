@@ -6,12 +6,6 @@ const app = express(); // express fucntion return an object "app"
 const path = require("path"); //for handling directories and paths
 
 const exphbs = require("express-handlebars"); //for views and hbs files
-const hbars = exphbs.create({
-  defaultLayout: "main",
-  layoutsDir: path.join(app.get("views"), "layouts"), //layouts path concatenation
-  partialsDir: path.join(app.get("views"), "partials"), //partials path concatenation "like contact me or footer"
-  extname: ".hbs",
-});
 
 /* ------------------------------Global Variables------------------------------ */
 const DEFAULT_PORT = 3000;
