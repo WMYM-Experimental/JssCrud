@@ -15,6 +15,7 @@ It is my first time working on backend.
 - CRUD
 - Forms
 - Views
+- Accounts
 
 ## Technologies (Most Important):
 
