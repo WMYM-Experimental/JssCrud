@@ -1,11 +1,12 @@
 /* ------------------------------Init and require------------------------------ */
 const express = require("express"); //express
-const methodOverride = require("method-override");
 const session = require("express-session"); //for handling users sessions
-const app = express(); // express fucntion return an object "app"
-const path = require("path"); //for handling directories and paths
-
 const exphbs = require("express-handlebars"); //for views and hbs files
+
+const app = express(); // express fucntion return an object "app"
+
+const path = require("path"); //for handling directories and paths
+const methodOverride = require("method-override");
 
 /* ------------------------------Global Variables------------------------------ */
 const DEFAULT_PORT = 3000;
@@ -16,7 +17,7 @@ app.set("views", path.join(__dirname, "views"));
 app.engine(".hbs", hbars.engine);
 app.set("view engine", ".hbs");
 
-/* ------------------------------MIddlewares------------------------------ */
+/* ------------------------------Middlewares------------------------------ */
 app.use(express.urlencoded({ extended: false })); // configuration for obtaining data -no images-
 app.use(methodOverride("_method"));
 app.use(
