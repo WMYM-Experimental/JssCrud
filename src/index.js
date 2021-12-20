@@ -1,3 +1,4 @@
+require("./database");
 /* ------------------------------Init and require------------------------------ */
 const express = require("express"); //express
 const session = require("express-session"); //for handling users sessions
@@ -26,7 +27,7 @@ app.get("/", (req, res) => {
 });
 
 /* ------------------------------Static Files------------------------------ */
-
+app.set(express.static(path.join(__dirname, "public")));
 /* ------------------------------Server listening------------------------------ */
 app.listen(app.get("port"), () => {
   console.log("SERVER PORT", app.get("port")); //already working on port 3000
