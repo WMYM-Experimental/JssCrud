@@ -4,6 +4,7 @@
   "description": "This is my biggest project until now, the pourpose is the same as \"First Try Website\" repo\r It is to work with some technologies maybe i dont know them all correctly.\r But thats the point to experiment and see what i can do in the future with the thing i learn from this.\r And then in another project i could do something entirely by my own like in the past with \"FirstTryWebsite\" and \"Art-Human-Expression-Communication_Portfolio\"",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "repository": {
