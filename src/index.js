@@ -1,14 +1,14 @@
+/* ------------------------------Require------------------------------ */
+require("dotenv").config();
 require("./database");
-/* ------------------------------Init and require------------------------------ */
+
+/* -------------------------Init configuration------------------------ */
 const express = require("express"); //express
 const session = require("express-session"); //for handling users sessions
-
-const exphbs = require("express-handlebars"); //for views and hbs files
-
 const app = express(); // express fucntion return an object "app"
 
+const exphbs = require("express-handlebars"); //for views and hbs files
 const path = require("path"); //for handling directories and paths
-
 const methodOverride = require("method-override");
 
 /* ------------------------------Global Variables------------------------------ */
