@@ -33,13 +33,11 @@ app.set("view engine", ".hbs");
 /* ------------------------------Middlewares------------------------------- */
 app.use(express.urlencoded({ extended: false })); // configuration for obtaining data -no images-
 
-/* ----------------------------------Routes-------------------------------- */
+/* ------------------------------Routes------------------------------------ */
+app.use(require("./routes/index.routes"));
 
 /* ------------------------------Static Files------------------------------ */
 app.use(express.static(path.join(__dirname, "public")));
-
-/* ------------------------------Routes------------------------------------ */
-app.use(require("./routes/index.routes"));
 
 /* ------------------------------Server listening------------------------------ */
 app.listen(app.get("port"), () => {
