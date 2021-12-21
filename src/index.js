@@ -19,7 +19,15 @@ const DEFAULT_PORT = 3000;
 app.set("port", process.env.PORT || DEFAULT_PORT);
 
 app.set("views", path.join(__dirname, "views"));
-app.engine("handlebars", engine({ extname: ".hbs", defaultLayout: "main" }));
+app.engine(
+  "handlebars",
+  engine({
+    extname: ".hbs",
+    layoutsDir: path.join(app.get("views"), "layouts"),
+    partialsDir: path.join(app.get("views"), "layouts"),
+    defaultLayout: "main",
+  })
+);
 app.set("view engine", "handlebars");
 
 /* ------------------------------Middlewares------------------------------ */
