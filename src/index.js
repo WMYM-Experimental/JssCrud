@@ -20,7 +20,7 @@ app.set("port", process.env.PORT || DEFAULT_PORT);
 
 app.set("views", path.join(__dirname, "views"));
 app.engine(
-  "handlebars",
+  ".hbs",
   engine({
     extname: ".hbs",
     layoutsDir: path.join(app.get("views"), "layouts"),
@@ -28,14 +28,14 @@ app.engine(
     defaultLayout: "main",
   })
 );
-app.set("view engine", "handlebars");
+app.set("view engine", ".hbs");
 
 /* ------------------------------Middlewares------------------------------ */
 app.use(express.urlencoded({ extended: false })); // configuration for obtaining data -no images-
 
 /* ------------------------------Routes------------------------------ */
 app.get("/", (req, res) => {
-  res.send("Hello");
+  res.render("index");
 });
 
 /* ------------------------------Static Files------------------------------ */
