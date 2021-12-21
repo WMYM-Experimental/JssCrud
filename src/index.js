@@ -1,8 +1,8 @@
-/* ------------------------------Require------------------------------ */
+/* ----------------------------------Require---------------------------------- */
 require("dotenv").config();
 require("./database");
 
-/* -------------------------Init configuration------------------------ */
+/* ---------------------------------Init configuration------------------------ */
 const express = require("express"); //express
 const session = require("express-session"); //for handling users sessions
 
@@ -24,22 +24,22 @@ app.engine(
   engine({
     extname: ".hbs",
     layoutsDir: path.join(app.get("views"), "layouts"),
-    partialsDir: path.join(app.get("views"), "layouts"),
+    partialsDir: path.join(app.get("views"), "partials"),
     defaultLayout: "main",
   })
 );
 app.set("view engine", ".hbs");
 
-/* ------------------------------Middlewares------------------------------ */
+/* ------------------------------Middlewares------------------------------- */
 app.use(express.urlencoded({ extended: false })); // configuration for obtaining data -no images-
+
+/* ----------------------------------Routes-------------------------------- */
 
 /* ------------------------------Static Files------------------------------ */
 app.use(express.static(path.join(__dirname, "public")));
 
-/* ------------------------------Routes------------------------------ */
-app.get("/", (req, res) => {
-  res.render("index");
-});
+/* ------------------------------Routes------------------------------------ */
+app.use(require("./routes/index.routes"));
 
 /* ------------------------------Server listening------------------------------ */
 app.listen(app.get("port"), () => {
