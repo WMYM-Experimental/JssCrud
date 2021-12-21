@@ -4,6 +4,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Source Sans Pro", sans-serif;
+  color: #fff;
 }
 body {
   background: #141414;
@@ -23,13 +24,11 @@ header {
   border-bottom: 3px #1c1c24 solid;
 }
 .navbar__logo {
-  color: #fff;
   font-size: 1.8em;
   font-weight: 700;
   letter-spacing: 1.3px;
 }
 .links {
-  color: #fff;
   font-size: 1em;
   font-weight: 400;
   margin-left: 30px;
@@ -39,14 +38,12 @@ header {
   position: relative;
 }
 .navbar__links {
-  color: #fff;
   font-size: 1em;
   font-weight: 400;
   margin-left: 30px;
   transition: 0.8s ease;
 }
 .navbar__links a {
-  color: #fff;
   font-size: 1em;
   font-weight: 400;
   margin-left: 30px;
@@ -56,7 +53,6 @@ header {
   color: #0cbcfc;
 }
 .ham-menu {
-  color: #fff;
   width: 30px;
   height: 30px;
   display: none;
@@ -66,7 +62,6 @@ header {
   font-weight: 600;
   background-color: #0cbcfc;
   border: 2px solid transparent;
-  color: #fff;
   font-weight: bold;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -80,8 +75,60 @@ header {
   border-color: #0cbcfc;
 }
 
-h1 {
-  margin-top: 100px;
+/* -----------------------------------navbar----------------------------------- */
+section {
+  padding: 100px 200px;
+}
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #141414;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/bg.svg");
+}
+.home__content {
+  max-width: 800px;
+}
+.home__content h2 {
+  font-size: 2em;
+  font-weight: 500;
+}
+.home__content h2 span {
+  font-size: 2.8em;
+  font-weight: 700;
+}
+.btn {
+  margin-top: 25px;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+
+/*  -----------------------------------footer----------------------------------- */
+.footer {
+  max-width: 100vw;
+  max-height: 10vh;
+  background: #141414;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  border-top: 3px #1c1c24 solid;
+}
+.footer-title {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.footer span {
+  font-size: 0.8em;
+}
+.footer a {
+  font-size: 0.8em;
 }
 
 /*  -----------------------------------responsive----------------------------------- */
