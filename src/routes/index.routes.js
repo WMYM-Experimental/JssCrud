@@ -1,12 +1,12 @@
 const { Router } = require("express");
 const router = Router();
+const {
+  renderIndex,
+  renderAbout,
+} = require("../controllers/index.controllers");
 
-router.get("/", (req, res) => {
-  res.render("index");
-});
+router.get("/", renderIndex);
 
-router.get("/about", (req, res) => {
-  res.render("about");
-});
+router.get("/about", renderAbout);
 
 module.exports = router;
