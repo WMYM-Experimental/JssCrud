@@ -54,7 +54,7 @@ header {
   font-weight: 700;
   letter-spacing: 1.2px;
 }
-.navHeader__links {
+.navbar__links {
   position: relative;
   font-size: 1rem;
   font-weight: 700;
@@ -67,6 +67,10 @@ header {
   padding: 0.75rem 1rem;
   text-decoration: none;
   display: block;
+}
+.navbar__links a:hover {
+  cursor: pointer;
+  color: #0cbcfc;
 }
 .des-links {
   margin-left: 35px;
