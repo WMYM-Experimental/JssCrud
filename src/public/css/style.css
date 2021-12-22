@@ -88,7 +88,7 @@ header {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/bg.svg");
+  background-image: url("/img/svg/bg.svg");
 }
 .home__content span {
   font-size: 2.8em;
@@ -144,7 +144,10 @@ header {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/bg.svg");
+  background-image: url("/img/svg/bg.svg");
+}
+.about .about__title {
+  font-size: 2em;
 }
 .about .content {
   display: flex;
@@ -172,14 +175,14 @@ header {
   align-items: center;
   flex-direction: column;
   border-radius: 8px;
-  border: 2px solid #1f7a8c;
+  border: 2px solid #0cbcfc;
   transition: transform 0.8s ease;
 }
 .about .content .row .card .about-icon span {
   text-align: center;
   align-items: center;
   font-size: 3.5em;
-  color: #1f7a8c;
+  color: #0cbcfc;
   transition: transform 0.8s ease;
 }
 .about .content .row .card:hover .about-icon span {
@@ -191,7 +194,12 @@ header {
   margin: 10px;
   text-align: center;
   justify-content: center;
-  color: #1f7a8c;
+  color: #e3595d;
+}
+.about .content .row .card .info {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 /* -----------------------------------FOOTER----------------------------------- */
 .footer {
