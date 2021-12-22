@@ -47,6 +47,7 @@ header {
   justify-content: space-between;
   transition: 0.8s ease;
   border-bottom: 3px #1c1c24 solid;
+  border-radius: 0 0 8px 8px;
 }
 .navbar__logo {
   font-size: 1.8em;
@@ -72,6 +73,10 @@ header {
 }
 .ham-menu {
   display: none;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  text-align: center;
 }
 /* -----------------------------------HOME----------------------------------- */
 .home {
@@ -116,20 +121,17 @@ header {
   justify-content: flex-start;
   padding: 8px 15px;
   margin-top: 10px;
-  font-weight: 600;
-  background-color: #0cbcfc;
-  border: 2px solid transparent;
   font-weight: bold;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  color: #0cbcfc;
+  border: 3px #0cbcfc solid;
+  border-radius: 8px;
 }
 .sign-log:hover {
-  background-color: transparent;
-  color: #0cbcfc;
-  border-color: #0cbcfc;
+  color: #e3595d;
+  border-color: #e3595d;
 }
 /* -----------------------------------FOOTER----------------------------------- */
 .footer {
@@ -140,6 +142,7 @@ header {
   text-align: center;
   align-items: center;
   border-top: 3px #1c1c24 solid;
+  border-radius: 8px 8px 0 0;
 }
 .footer-title {
   font-size: 0.8em;
@@ -167,19 +170,19 @@ header {
   .console {
     text-align: left;
     height: 10vh;
-    width: 95%;
+    width: 100%;
     display: block;
   }
   .console #des-text {
-    width: 95%;
-    font-size: 1.4em;
+    width: 100%;
+    font-size: 1.65em;
   }
   #line {
     bottom: 5px;
-    font-size: 2em;
+    font-size: 1.65em;
     display: inline-block;
     position: relative;
-    left: -6px;
+    left: -5px;
   }
   .home .home__content {
     flex-direction: column;
@@ -199,6 +202,60 @@ header {
     align-items: center;
     justify-content: center;
     align-items: center;
+  }
+  .navbar__links {
+    display: none;
+  }
+  .navbar__links.active {
+    display: inline;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.8s ease;
+    background: #141414;
+    border-left: 3px #1c1c24 solid;
+    border-radius: 8px 0 0 8px;
+  }
+  .navbar__links.active a {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 20px;
+    padding: 5px 20px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    color: #0cbcfc;
+    border: 3px #0cbcfc solid;
+    border-radius: 8px;
+  }
+  .navbar__links.active a:hover {
+    color: #e3595d;
+    border-color: #e3595d;
+  }
+
+  .ham-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .ham-menu span {
+    position: absolute;
+    transition: 0.8 ease;
+    display: block;
+    z-index: 999;
+  }
+  #ham-icon {
+    transition: 0.8 ease;
+  }
+  .ham-menu .active {
+    position: absolute;
+    display: block;
+    z-index: 999;
   }
 }
 @media (max-width: 305px) {
