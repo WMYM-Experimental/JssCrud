@@ -1,3 +1,31 @@
+//ham menu open and close effect-responsive design
+const hamIcon = document.getElementById("ham-icon");
+const hamMenu = document.getElementById("ham-menu");
+const navbarLinks = document.querySelector(".navbar__links");
+const hamMenuItems = document.querySelectorAll(".navbar__links a");
+
+function verifyActiveMenu() {
+  if (hamMenu.classList.contains("active")) {
+    hamIcon.innerHTML = "close";
+  } else {
+    hamIcon.innerHTML = "menu";
+  }
+}
+
+hamMenu.addEventListener("click", () => {
+  hamMenu.classList.toggle("active");
+  navbarLinks.classList.toggle("active");
+  verifyActiveMenu();
+});
+
+hamMenuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    hamMenu.classList.remove("active");
+    navbarLinks.classList.remove("active");
+    verifyActiveMenu();
+  });
+});
+
 function consoleTextEffect(words, id, colors) {
   if (colors === undefined) {
     colors = ["#fff"];
@@ -56,36 +84,10 @@ function consoleTextEffect(words, id, colors) {
   }, 400);
 }
 
-consoleTextEffect(
-  ["Make an Account", "Make a Note", "Write your Tasks"],
-  "des-text",
-  ["#0cbcfc", "#E3595D"]
-);
-
-//ham menu open and close effect-responsive design
-const hamIcon = document.getElementById("ham-icon");
-const hamMenu = document.getElementById("ham-menu");
-const navbarLinks = document.querySelector(".navbar__links");
-const hamMenuItems = document.querySelectorAll(".navbar__links a");
-
-function verifyActiveMenu() {
-  if (hamMenu.classList.contains("active")) {
-    hamIcon.innerHTML = "close";
-  } else {
-    hamIcon.innerHTML = "menu";
-  }
+if (document.contains(document.getElementById("des-text"))) {
+  consoleTextEffect(
+    ["Make an Account", "Make a Note", "Write your Tasks"],
+    "des-text",
+    ["#0cbcfc", "#E3595D"]
+  );
 }
-
-hamMenu.addEventListener("click", () => {
-  hamMenu.classList.toggle("active");
-  navbarLinks.classList.toggle("active");
-  verifyActiveMenu();
-});
-
-hamMenuItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    hamMenu.classList.remove("active");
-    navbarLinks.classList.remove("active");
-    verifyActiveMenu();
-  });
-});

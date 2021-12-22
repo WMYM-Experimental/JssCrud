@@ -133,6 +133,66 @@ header {
   color: #e3595d;
   border-color: #e3595d;
 }
+/* -----------------------------------ABOUT----------------------------------- */
+.about {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/bg.svg");
+}
+.about .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 200px;
+}
+.about .about__title {
+  width: 100%;
+  text-align: center;
+}
+.about .content .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.about .content .row .card {
+  display: flex;
+  justify-content: center;
+  width: 240px;
+  margin: 20px;
+  padding: 25px;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 2px solid #1f7a8c;
+  transition: transform 0.8s ease;
+}
+.about .content .row .card .about-icon span {
+  text-align: center;
+  align-items: center;
+  font-size: 3.5em;
+  color: #1f7a8c;
+  transition: transform 0.8s ease;
+}
+.about .content .row .card:hover .about-icon span {
+  transform: translateY(-10px);
+}
+.about .content .row .card .info h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  color: #1f7a8c;
+}
 /* -----------------------------------FOOTER----------------------------------- */
 .footer {
   max-width: 100vw;
@@ -151,7 +211,7 @@ header {
 }
 
 /*-----------------------------------RESPONSIVE-----------------------------------*/
-@media (max-width: 1020px) {
+@media (max-width: 1005px) {
   header {
     padding: 12px 20px;
   }
@@ -193,16 +253,14 @@ header {
   .home .home__content .home__index .btn {
     margin-top: 40px;
   }
+  .about {
+    height: 100%;
+    padding: 80px;
+    margin-top: 100px;
+    background-position-y: bottom;
+  }
 }
 @media (max-width: 450px) {
-  .home .home__content .home__index .btn {
-    display: flex;
-    margin-top: 40px;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-  }
   .navbar__links {
     display: none;
   }
@@ -242,6 +300,9 @@ header {
   .ham-menu {
     display: flex;
     justify-content: flex-end;
+  }
+  .ham-menu:hover {
+    cursor: pointer;
   }
   .ham-menu span {
     position: absolute;
