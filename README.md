@@ -16,10 +16,12 @@ It is my first time working on backend.
 - Forms
 - Views
 - Accounts
+- Responsive Design
 
-## Technologies (Most Important):
+## Technologies (Most Importants):
 
-- Node.js
-- Express
-- Express HandleBars
-- bcryptjs
+- JavaScript
+- Node.js/Express
+- HandleBars
+- CSS
+- MongoDB
