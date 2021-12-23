@@ -2,7 +2,7 @@ const notesController = {};
 
 //Creation
 notesController.renderNoteForm = (req, res) => {
-  res.send("notes add");
+  res.render("notes/createNote");
 };
 
 notesController.renderCreateNote = (req, res) => {
