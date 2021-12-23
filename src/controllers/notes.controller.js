@@ -1,3 +1,4 @@
+const Note = require("../models/Note");
 const notesController = {};
 
 //Creation
@@ -5,8 +6,12 @@ notesController.renderNoteForm = (req, res) => {
   res.render("notes/createNote");
 };
 
-notesController.renderCreateNote = (req, res) => {
-  res.send("new note add");
+notesController.renderCreateNote = async (req, res) => {
+  const { title, description } = req.body;
+  const newNote = new Note({ title: title, description: description });
+  console.log(newNote);
+  //await newNote.save();
+  res.send(newNote);
 };
 
 //Read
