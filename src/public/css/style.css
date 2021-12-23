@@ -246,39 +246,36 @@ header {
 }
 .form-header {
   border-radius: 8px 8px 0 0;
-  background-color: #e3595d;
+  background-color: #0cbcfc;
   padding: 20px;
   font-size: 1.4em;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   opacity: 0.8;
-  border: 3px #e3595d solid;
 }
 .form-container {
   background: #1c1c24;
   opacity: 0.8;
   padding: 12px;
+  border-radius: 0 0 8px 8px;
 }
 .form p {
   padding: 12px;
 }
 .form input {
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: groove;
   display: block;
   width: 100%;
   border-width: 3px;
   padding: 16px;
-  outline: none;
-  font-family: inherit;
   font-size: 0.95em;
-}
-.form input {
   background: #1c1c24;
   border-color: #bbb;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  outline: none;
 }
 .form input:focus {
   border-color: #0cbcfc;
