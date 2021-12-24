@@ -10,13 +10,14 @@ notesController.renderCreateNote = async (req, res) => {
   const { title, description } = req.body;
   const newNote = new Note({ title: title, description: description });
   console.log(newNote);
-  //await newNote.save();
+  await newNote.save();
   res.send(newNote);
 };
 
 //Read
-notesController.renderReadNotes = (req, res) => {
-  res.send("All ur notes");
+notesController.renderReadNotes = async (req, res) => {
+  const allNotes = await Note.find();
+  res.render("notes/allNotes", { allNotes });
 };
 
 //Update
