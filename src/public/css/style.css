@@ -301,16 +301,17 @@ header {
 
 /*-----------------------------------READ ALL NOTES-----------------------------------*/
 .container-notes {
-  height: 100vh;
+  height: 200vh;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
-.notes-container {
-  justify-content: center;
-  align-items: center;
-  margin: 200px;
-  width: 90vw;
-  background: red;
+
+.note {
+  margin: 10%;
+  height: 200px;
+  width: 200px;
+  background: green;
 }
 /*-----------------------------------RESPONSIVE-----------------------------------*/
 @media (max-width: 1005px) {
