@@ -13,10 +13,16 @@ It is my first time working on backend.
 
 ## Technologies (Most Importants):
 
-- JavaScript (DOM Manipulation) -> No frameworks
-- Node.js -> Express.js
-- HTML/CSS -> HandleBars
-- MongoDB -> MongoAtlas
+### Backend
+
+- Node.js/Express.js (Server)
+- MongoDB/MongoAtlas (Data Base)
+
+### Frontend
+
+- JavaScript (DOM Manipulation and Animations)
+- Handlebars (Views and HTML render)
+- CSS (Style of the views)
 
 ## What you gonna see on this project:
 
@@ -28,4 +34,4 @@ It is my first time working on backend.
 - Responsive Design
 - Frontend Animations
 
-And a lot of things more.
+And a lot of things more...
