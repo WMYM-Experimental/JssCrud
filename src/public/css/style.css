@@ -330,13 +330,17 @@ header {
 .button-container {
   position: absolute;
   bottom: 0;
-  height: 8vh;
+  height: 15%;
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10%;
 }
 .edit-delete {
   text-align: center;
-  justify-content: center;
-  padding: 5px 15px;
+  justify-content: space-between;
+  padding: 5px 10px;
   font-weight: bold;
   background: transparent;
   transition: all 0.2s ease-in-out;
