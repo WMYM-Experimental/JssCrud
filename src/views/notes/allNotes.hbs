@@ -1,20 +1,20 @@
-<seection class="container">
-    <div class="row">
-        {{#each allNotes}}
-        <div class="col">
-            <div class="note">
-                <h6 class="note-title">
-                    {{allNotes.title}}
-                </h6>
-                <p class="note-description">
-                    {{allNotes.description}}
-                </p>
-                <button class="edit-note">
-                </button>
-                <button class="delete-note">
-                </button>
-            </div>
+<div class="gallery">
+    {{#each allNotes}}
+    <div class="note">
+        <h6 class="note-title">
+            {{title}} TITULO
+        </h6>
+        <p class="note-description">
+            {{description}} DESCRIPTION
+        </p>
+        <div class="button-container">
+            <button id="edit-note" class="edit-delete edit">
+                Update
+            </button>
+            <button id="delete-note" class="edit-delete delete">
+                Delete
+            </button>
         </div>
-        {{/each}}
     </div>
-</seection>
+    {{/each}}
+</div>

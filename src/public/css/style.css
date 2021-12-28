@@ -300,18 +300,54 @@ header {
 }
 
 /*-----------------------------------READ ALL NOTES-----------------------------------*/
-.container-notes {
-  height: 200vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.note {
+.gallery {
   margin: 10%;
-  height: 200px;
-  width: 200px;
-  background: green;
+  max-width: 100vw;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+}
+.note {
+  width: 95%;
+  height: 65%;
+  margin: auto;
+  background: #1c1c24;
+  opacity: 0.8;
+  border-radius: 0 0 8px 8px;
+  position: relative;
+}
+.note-title {
+  border-radius: 8px 8px 0 0;
+  background-color: #0cbcfc;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.button-container {
+  position: absolute;
+  bottom: 0;
+  height: 8vh;
+  display: flex;
+}
+.edit-delete {
+  text-align: center;
+  justify-content: center;
+  padding: 5px 15px;
+  font-weight: bold;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  border: 3px #0cbcfc solid;
+  border-radius: 8px;
+}
+.edit:hover {
+  color: #fff;
+}
+.delete:hover {
+  color: #fff;
 }
 /*-----------------------------------RESPONSIVE-----------------------------------*/
 @media (max-width: 1005px) {
