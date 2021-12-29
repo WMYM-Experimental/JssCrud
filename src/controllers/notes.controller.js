@@ -1,7 +1,7 @@
 const Note = require("../models/Note");
 const notesController = {};
 
-//Creation
+//Create
 notesController.renderNoteForm = (req, res) => {
   res.render("notes/createNote");
 };
@@ -28,6 +28,8 @@ notesController.renderUpdateForm = (req, res) => {
 notesController.renderUpdateNote = (req, res) => {
   res.send("Update note");
 };
+
+//Delete
 notesController.renderDeleteNote = (req, res) => {
   res.send("Delete note");
 };
