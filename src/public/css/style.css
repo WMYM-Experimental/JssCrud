@@ -301,6 +301,9 @@ header {
 }
 
 /*-----------------------------------READ ALL NOTES-----------------------------------*/
+.gallery-container {
+  width: 100%;
+}
 .gallery {
   margin: 10%;
   max-width: 100vw;

@@ -1,20 +1,22 @@
-<div class="gallery">
-    {{#each NOTES}}
-    <div class="note">
-        <h6 class="note-title">
-            {{this.title}}
-        </h6>
-        <p class="note-description">
-            {{this.description}}
-        </p>
-        <div class="button-container">
-            <button id="edit-note" class="edit-delete edit">
-                Update
-            </button>
-            <button id="delete-note" class="edit-delete delete">
-                Delete
-            </button>
+<div class="gallery-container">
+    <div class="gallery">
+        {{#each NOTES}}
+        <div class="note">
+            <h6 class="note-title">
+                {{this.title}}
+            </h6>
+            <p class="note-description">
+                {{this.description}}
+            </p>
+            <div class="button-container">
+                <button id="edit-note" class="edit-delete edit">
+                    Update
+                </button>
+                <button id="delete-note" class="edit-delete delete">
+                    Delete
+                </button>
+            </div>
         </div>
+        {{/each}}
     </div>
-    {{/each}}
 </div>
