@@ -8,16 +8,16 @@ notesController.renderNoteForm = (req, res) => {
 
 notesController.renderCreateNote = async (req, res) => {
   const { title, description } = req.body;
-  const newNote = new Note({ title: title, description: description });
-  console.log(newNote);
+  const newNote = new Note({ title, description });
   await newNote.save();
+  console.log(newNote);
   res.send(newNote);
 };
 
 //Read
 notesController.renderReadNotes = async (req, res) => {
-  const allNotes = await Note.find();
-  res.render("notes/allNotes", { allNotes });
+  const NOTES = await Note.find().lean();
+  res.render("notes/allNotes", { NOTES });
 };
 
 //Update

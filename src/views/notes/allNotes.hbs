@@ -1,11 +1,11 @@
 <div class="gallery">
-    {{#each allNotes}}
+    {{#each NOTES}}
     <div class="note">
         <h6 class="note-title">
-            {{title}} TITULO
+            {{this.title}}
         </h6>
         <p class="note-description">
-            {{description}} DESCRIPTION
+            {{this.description}}
         </p>
         <div class="button-container">
             <button id="edit-note" class="edit-delete edit">

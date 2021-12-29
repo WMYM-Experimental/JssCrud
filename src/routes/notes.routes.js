@@ -14,7 +14,7 @@ router.get("/notes/create", renderNoteForm);
 router.post("/notes/createNote", renderCreateNote);
 
 //Read all Notes
-router.get("/notes", renderReadNotes);
+router.get("/notes/", renderReadNotes);
 
 //Update Notes
 router.get("/notes/edit/:id", renderUpdateForm);

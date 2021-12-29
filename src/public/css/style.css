@@ -33,7 +33,7 @@ body {
   position: relative;
   left: -6px;
 }
-/*------------------------------------NAVBAR------------------------------------*/
+/*------------------------------------NAV BAR------------------------------------*/
 header {
   z-index: 10;
   position: fixed;
@@ -174,7 +174,7 @@ header {
   display: flex;
   justify-content: center;
   width: 220px;
-  margin: 15px;
+  margin: 5px;
   padding: 20px;
   align-items: center;
   flex-direction: column;
@@ -221,6 +221,7 @@ header {
   font-weight: bold;
   animation: change-text-color 12s infinite;
 }
+
 /* -----------------------------------NOTE FORM----------------------------------- */
 .container {
   display: flex;
@@ -348,11 +349,14 @@ header {
   border-radius: 8px;
 }
 .edit:hover {
-  color: #fff;
+  border-color: #85cc2d;
+  color: #85cc2d;
 }
 .delete:hover {
-  color: #fff;
+  border-color: #e3595d;
+  color: #e3595d;
 }
+
 /*-----------------------------------RESPONSIVE-----------------------------------*/
 @media (max-width: 1005px) {
   header {
