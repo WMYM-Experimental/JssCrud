@@ -88,6 +88,6 @@ if (document.contains(document.getElementById("des-text"))) {
   consoleTextEffect(
     ["Make an Account", "Make a Note", "Write your Tasks"],
     "des-text",
-    ["#0cbcfc", "#E3595D"]
+    ["#0cbcfc", "#E3595D", "#85cc2d"]
   );
 }

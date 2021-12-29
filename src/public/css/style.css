@@ -134,8 +134,8 @@ header {
   border-radius: 8px;
 }
 .sign-log:hover {
-  color: #e3595d;
-  border-color: #e3595d;
+  color: #85cc2d;
+  border-color: #85cc2d;
 }
 /* -----------------------------------ABOUT----------------------------------- */
 .about {
@@ -198,7 +198,7 @@ header {
   margin: 10px;
   text-align: center;
   justify-content: center;
-  color: #e3595d;
+  color: #85cc2d;
 }
 .about .content .card-row .card .info {
   justify-content: center;
@@ -292,12 +292,12 @@ header {
   width: 100%;
 }
 .form input[type="submit"]:hover {
-  color: #e3595d;
-  border-color: #e3595d;
+  color: #85cc2d;
+  border-color: #85cc2d;
 }
 .form input[type="submit"]:focus {
-  color: #e3595d;
-  border-color: #e3595d;
+  color: #85cc2d;
+  border-color: #85cc2d;
 }
 
 /*-----------------------------------READ ALL NOTES-----------------------------------*/
