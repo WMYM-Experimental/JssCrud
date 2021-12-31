@@ -1,6 +1,6 @@
 # JESS-CRUD (working)
 
-This is basically a **"Notes App"** but with login for having users.
+This is a **"Notes App"** but with login for having users.
 
 ## Why im making this Project?
 
