@@ -9,7 +9,7 @@ const session = require("express-session"); //for handling users sessions
 const { engine } = require("express-handlebars"); //for views and hbs files
 const path = require("path"); //for handling directories and paths
 const morgan = require("morgan");
-const methodOverride = require("method-override");
+const methodOverride = require("method-override"); //for delete method
 
 const app = express(); // express fucntion return an object "app"
 
@@ -34,6 +34,7 @@ app.set("view engine", ".hbs");
 /* ------------------------------Middlewares------------------------------- */
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false })); // configuration for obtaining data -no images-
+app.use(methodOverride("_method"));
 
 /* ------------------------------Routes------------------------------------ */
 app.use(require("./routes/index.routes"));

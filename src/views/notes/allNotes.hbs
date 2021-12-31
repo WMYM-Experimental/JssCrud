@@ -12,9 +12,11 @@
                 <a href="/notes/edit/{{_id}}" id="edit-note" class="edit-delete edit">
                     Update
                 </a>
-                <form action="/notes/delete/{{_id}}" method="post"></form>
-                <input type="submit" id="delete-note" class="edit-delete delete" value="delete">
-                </input>
+                <form action="/notes/delete/{{_id}}?_method=delete" method="post">
+                    <input type="hidden" name="_method" value="delete">
+                    <input type="submit" id="delete-note" class="edit-delete delete" value="delete">
+                    </input>
+                </form>
             </div>
         </div>
         {{/each}}
