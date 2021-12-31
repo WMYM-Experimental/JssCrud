@@ -11,7 +11,7 @@ notesController.renderCreateNote = async (req, res) => {
   const newNote = new Note({ title, description });
   await newNote.save();
   console.log(newNote);
-  res.send(newNote);
+  res.redirect("/notes");
 };
 
 //Read
