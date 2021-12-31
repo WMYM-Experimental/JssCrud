@@ -28,7 +28,7 @@ notesController.renderUpdateForm = async (req, res) => {
 };
 
 notesController.renderUpdateNote = async (req, res) => {
-  const { title, description } = req.body;
+  const { title, description } = req.body; //request updated variables
   await Note.findByIdAndUpdate(req.params.id, { title, description });
   res.redirect("/notes");
 };

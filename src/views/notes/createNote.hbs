@@ -1,12 +1,21 @@
 <section class="container">
     <div class="form">
-
+        {{!-- form card title --}}
         <h2 class="form-header">Create Note</h2>
 
         <form class="form-container" action="/notes/createNote" method="post">
-            <p><input type="text" placeholder="Note Title" name="title" maxlength="30" autofocus></p>
-            <p><input type="text" placeholder="Description" name="description" maxlength="220"></p>
-            <p><input type="submit" placeholder="Create" value="Create"></p>
+            {{!-- title --}}
+            <p>
+                <input type="text" placeholder="Note Title" name="title" maxlength="30" autofocus>
+            </p>
+            {{!-- description --}}
+            <p>
+                <input type="text" placeholder="Description" name="description" maxlength="220">
+            </p>
+            {{!-- createNote button --}}
+            <p>
+                <input type="submit" placeholder="Create" value="Create">
+            </p>
         </form>
     </div>
 </section>
