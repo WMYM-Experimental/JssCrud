@@ -9,12 +9,12 @@
                 {{this.description}}
             </p>
             <div class="button-container">
-                <button id="edit-note" class="edit-delete edit">
+                <a href="/notes/edit/{{_id}}" id="edit-note" class="edit-delete edit">
                     Update
-                </button>
-                <button id="delete-note" class="edit-delete delete">
-                    Delete
-                </button>
+                </a>
+                <form action="/notes/delete/{{_id}}" method="post"></form>
+                <input type="submit" id="delete-note" class="edit-delete delete" value="delete">
+                </input>
             </div>
         </div>
         {{/each}}
