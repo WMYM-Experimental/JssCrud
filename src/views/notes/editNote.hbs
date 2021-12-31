@@ -3,10 +3,21 @@
 
         <h2 class="form-header">Updating Note</h2>
 
-        <form class="form-container" action="/notes" method="post">
-            <p><input type="text" placeholder="Note Title" name="title" maxlength="30" autofocus></p>
-            <p><input type="text" placeholder="Description" name="description" maxlength="220"></p>
-            <p><input type="submit" placeholder="Create" value="Create"></p>
+        <form class="form-container" action="/notes/edit/{{noteUp._id}}?_method=put" method="post">
+            <input type="hidden" name="_method" value="put">
+            {{!-- title --}}
+            <p>
+                <input type="text" placeholder="Note Title" name="title" value="{{noteUp.title}}" maxlength="30">
+            </p>
+            {{!-- description --}}
+            <p>
+                <input type="text" placeholder="Description" name="description" value="{{noteUp.description}}"
+                    maxlength="220">
+            </p>
+            {{!-- button --}}
+            <p>
+                <input type="submit" value="Update">
+            </p>
         </form>
     </div>
 </section>
