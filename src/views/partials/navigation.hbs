@@ -3,17 +3,21 @@
   <div class="usual">
     <a href="/" class="navbar__logo">JssCrud</a>
   </div>
-
   {{!-- ham menu for responsive --}}
   <div class="ham-menu" id="ham-menu">
     <span class="material-icons" id="ham-icon">
       menu
     </span>
   </div>
-
   {{!-- navigation links --}}
   <div class="navbar__links">
-    <a href="/notes" class="links des-links">Notes</a>
+    <a class="links des-links dropdownCtn" id="dropdownCtn">
+      CRUD
+      <ul class="dropdown" id="dropdown">
+        <li class="dropdown-item"><a href="/notes/create" class="dropdown-link">Create</a></li>
+        <li class="dropdown-item"><a href="/notes" class="dropdown-link">Read</a></li>
+      </ul>
+    </a>
     <a href="/about" class="links des-links">About</a>
     <a href="/" class="links des-links">Home</a>
   </div>

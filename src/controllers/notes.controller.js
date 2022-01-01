@@ -39,4 +39,5 @@ notesController.renderDeleteNote = async (req, res) => {
   await Note.findByIdAndDelete(req.params.id);
   res.redirect("/notes"); //refresh
 };
+
 module.exports = notesController;

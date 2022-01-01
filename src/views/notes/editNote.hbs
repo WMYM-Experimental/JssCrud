@@ -1,8 +1,7 @@
 <section class="container">
     <div class="form">
-
+        {{!-- form card title --}}
         <h2 class="form-header">Updating Note</h2>
-
         <form class="form-container" action="/notes/edit/{{noteUp._id}}?_method=put" method="post">
             <input type="hidden" name="_method" value="put">
             {{!-- title --}}
