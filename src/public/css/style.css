@@ -374,6 +374,12 @@ header {
   color: #e3595d;
 }
 
+.successMssg {
+  text-align: center;
+  justify-content: center;
+  background: red;
+}
+
 /*-----------------------------------RESPONSIVE-----------------------------------*/
 @media (max-width: 1005px) {
   header {

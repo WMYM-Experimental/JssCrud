@@ -3,6 +3,8 @@ require("dotenv").config();
 require("./database");
 
 /* ---------------------------------Init configuration------------------------ */
+const DEFAULT_PORT = 3000;
+
 const express = require("express"); //express
 const { engine } = require("express-handlebars"); //for views and hbs files
 const path = require("path"); //for handling directories and paths
@@ -12,9 +14,6 @@ const flash = require("connect-flash");
 const session = require("express-session");
 
 const app = express(); // express fucntion return an object "app"
-
-/* ------------------------------Global Variables------------------------------ */
-const DEFAULT_PORT = 3000;
 
 /* ------------------------------Project Settings------------------------------ */
 app.set("port", process.env.PORT || DEFAULT_PORT);
@@ -31,10 +30,24 @@ app.engine(
 );
 app.set("view engine", ".hbs");
 
+/* ------------------------------Global Variables------------------------------ */
+app.use((req, res, next) => {
+  res.locals.successMssg = req.flash("successMssg");
+  next();
+});
+
 /* ------------------------------Middlewares------------------------------- */
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false })); // configuration for obtaining data -no images-
 app.use(methodOverride("_method"));
+app.use(
+  session({
+    secret: "jessy",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+app.use(flash());
 
 /* ------------------------------Routes------------------------------------ */
 app.use(require("./routes/index.routes"));
