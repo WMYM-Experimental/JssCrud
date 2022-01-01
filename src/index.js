@@ -30,12 +30,6 @@ app.engine(
 );
 app.set("view engine", ".hbs");
 
-/* ------------------------------Global Variables------------------------------ */
-app.use((req, res, next) => {
-  res.locals.successMssg = req.flash("successMssg");
-  next();
-});
-
 /* ------------------------------Middlewares------------------------------- */
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false })); // configuration for obtaining data -no images-
@@ -48,6 +42,12 @@ app.use(
   })
 );
 app.use(flash());
+
+/* ------------------------------Global Variables------------------------------ */
+app.use((req, res, next) => {
+  res.locals.successMssg = req.flash("successMssg");
+  next();
+});
 
 /* ------------------------------Routes------------------------------------ */
 app.use(require("./routes/index.routes"));
