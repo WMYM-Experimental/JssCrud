@@ -1,0 +1,20 @@
+<section class="container">
+    <div class="form">
+        {{!-- form card title --}}
+        <h2 class="form-header">Log In</h2>
+        <form class="form-container" action="/notes/createNote" method="post">
+            {{!-- email --}}
+            <p>
+                <input type="email" placeholder="E-mail" name="email">
+            </p>
+            {{!-- password --}}
+            <p>
+                <input type="password" placeholder="Password" name="password">
+            </p>
+            {{!-- send button --}}
+            <p>
+                <input type="submit" value="Log In">
+            </p>
+        </form>
+    </div>
+</section>
