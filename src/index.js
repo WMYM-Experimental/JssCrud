@@ -10,14 +10,13 @@ const { engine } = require("express-handlebars"); //for views and hbs files
 const path = require("path"); //for handling directories and paths
 const morgan = require("morgan"); //to see methods and what returns each one
 const methodOverride = require("method-override"); //for delete method
-const flash = require("connect-flash");
+const flash = require("connect-flash"); //to send messages from view to view
 const session = require("express-session");
 
-const app = express(); // express fucntion return an object "app"
+const app = express(); // express function return an object "app"
 
 /* ------------------------------Project Settings------------------------------ */
 app.set("port", process.env.PORT || DEFAULT_PORT);
-
 app.set("views", path.join(__dirname, "views"));
 app.engine(
   ".hbs",

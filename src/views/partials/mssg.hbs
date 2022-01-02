@@ -1,5 +1,8 @@
 {{#if successMssg}}
 <div class="successMssg">
-    {{successMssg}}
+    <span>{{successMssg}}</span>
+    <span class="material-icons" id="close-mssg" onclick="this.parentElement.style.display='none';">
+        close
+    </span>
 </div>
 {{/if}}
