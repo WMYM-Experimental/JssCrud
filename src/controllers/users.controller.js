@@ -7,6 +7,7 @@ usersController.renderSignForm = (req, res) => {
 
 usersController.renderSignUp = (req, res) => {
   res.send("ready to use sign");
+  console.log(req.body);
 };
 
 usersController.renderLoginForm = (req, res) => {
