@@ -1,0 +1,11 @@
+<div class="errorMssg Mssg">
+    <span>
+        {{#each errors}}
+        <span>{{text}}</span>
+        <span>.</span>
+        {{/each}}
+    </span>
+    <span class="material-icons" id="close-mssg" onclick="this.parentElement.style.display='none';">
+        close
+    </span>
+</div>

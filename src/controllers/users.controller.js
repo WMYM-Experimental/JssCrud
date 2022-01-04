@@ -6,8 +6,19 @@ usersController.renderSignForm = (req, res) => {
 };
 
 usersController.renderSignUp = (req, res) => {
-  res.send("ready to use sign");
-  console.log(req.body);
+  const { name, email, password, confirmPassword } = req.body;
+  const errors = [];
+  if (password != confirmPassword) {
+    errors.push({ text: "Passwords don't match" });
+  }
+  if (password.length < 6) {
+    errors.push({ text: "Passwords length must be 6 characters at least" });
+  }
+  if (errors.length > 0) {
+    res.render("users/signup", { errors });
+  } else {
+    res.send("ready to use sign");
+  }
 };
 
 usersController.renderLoginForm = (req, res) => {

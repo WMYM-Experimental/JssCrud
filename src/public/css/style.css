@@ -221,7 +221,6 @@ header {
   font-weight: bold;
   animation: change-text-color 12s infinite;
 }
-
 /* -----------------------------------NOTE FORM----------------------------------- */
 .container {
   display: flex;
@@ -299,7 +298,6 @@ header {
   color: #85cc2d;
   border-color: #85cc2d;
 }
-
 /*-----------------------------------READ ALL NOTES-----------------------------------*/
 .gallery-container {
   display: flex;
@@ -375,7 +373,6 @@ header {
   border-color: #e3595d;
   color: #e3595d;
 }
-
 .successMssg {
   display: flex;
   justify-content: space-between;
@@ -394,6 +391,16 @@ header {
 .successMssg span:hover {
   cursor: pointer;
 }
+.errorMssg {
+  border: 3px #e3595d solid;
+}
+.errorMssg span {
+  color: #e3595d;
+}
+.errorMssg span:hover {
+  cursor: pointer;
+}
+
 /*-----------------------------------RESPONSIVE-----------------------------------*/
 @media (max-width: 1005px) {
   header {
