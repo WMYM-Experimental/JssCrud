@@ -1,4 +1,5 @@
-<div class="errorMssg Mssg">
+{{#if errors}}
+<div class="errorMssg successMssg">
     <span>
         {{#each errors}}
         <span>{{text}}</span>
@@ -9,3 +10,4 @@
         close
     </span>
 </div>
+{{/if}}

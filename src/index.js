@@ -45,6 +45,7 @@ app.use(flash());
 /* ------------------------------Global Variables------------------------------ */
 app.use((req, res, next) => {
   res.locals.successMssg = req.flash("successMssg");
+  res.locals.errorMssg = req.flash("errorMssg");
   next();
 });
 
@@ -52,7 +53,6 @@ app.use((req, res, next) => {
 app.use(require("./routes/index.routes"));
 app.use(require("./routes/notes.routes"));
 app.use(require("./routes/users.routes"));
-
 /* ------------------------------Static Files------------------------------ */
 app.use(express.static(path.join(__dirname, "public")));
 
