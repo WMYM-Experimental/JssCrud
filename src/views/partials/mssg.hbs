@@ -6,3 +6,12 @@
     </span>
 </div>
 {{/if}}
+
+{{#if errorMssg}}
+<div class="errorMssg successMssg">
+    <span>{{errorMssg}}</span>
+    <span class="material-icons" id="close-mssg" onclick="this.parentElement.style.display='none';">
+        close
+    </span>
+</div>
+{{/if}}

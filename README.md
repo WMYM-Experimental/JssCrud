@@ -17,15 +17,15 @@ This is a **"Notes App"** but with login for having users.
 
 ## What you gonna see on this project:
 
-- CRUD
+##### CRUD
 
 You could do all CRUD basic operations
 
-- Login System
+##### Login System
 
 You could have your own account and your personal Notes.
 
-- Responsive Design & Frontend Animations
+##### Responsive Design & Frontend Animations
 
 As is needed i do a functional responsive web
 and also i added some JavaScript animations to make it more interactive

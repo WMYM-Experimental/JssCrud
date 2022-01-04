@@ -27,13 +27,15 @@ usersController.renderSignUp = async (req, res) => {
     const userEmail = await User.findOne({ email: email });
     if (userEmail) {
       req.flash("errorMssg", "Email already in use.");
-      res.redirect("users/signup");
+      console.log("------------ERROR---------------");
+      res.redirect("/users/signup");
     } else {
+      // Saving a New User
       const newUser = new User({ name, email, password });
       newUser.password = await newUser.encryptPassword(password);
       await newUser.save(); // Saving a New User
       req.flash("successMssg", "You are registered, Have a nice trip.");
-      res.redirect("users/login");
+      res.redirect("/users/login");
     }
   }
 };
