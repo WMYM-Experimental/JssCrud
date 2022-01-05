@@ -1,10 +1,23 @@
-{{#if erros}}
+{{#if errors}}
 <div class="errorMssg successMssg">
     <span>
         {{#each errors}}
         <span>{{text}}</span>
         <span>.</span>
         {{/each}}
+    </span>
+    <span class="material-icons" id="close-mssg" onclick="this.parentElement.style.display='none';">
+        close
+    </span>
+</div>
+{{/if}}
+
+// login
+{{#if error}}
+<div class="errorMssg successMssg">
+    <span>
+        <span>{{error}}</span>
+        <span>.</span>
     </span>
     <span class="material-icons" id="close-mssg" onclick="this.parentElement.style.display='none';">
         close

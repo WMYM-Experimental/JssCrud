@@ -1,5 +1,6 @@
 /* ----------------------------------Require---------------------------------- */
 require("dotenv").config();
+require("./config/passport");
 require("./database");
 
 /* ---------------------------------Init configuration------------------------ */
@@ -12,6 +13,7 @@ const morgan = require("morgan"); //to see methods and what returns each one
 const methodOverride = require("method-override"); //for delete method
 const flash = require("connect-flash"); //to send messages from view to view
 const session = require("express-session");
+const passport = require("passport");
 
 const app = express(); // express function return an object "app"
 
@@ -40,12 +42,15 @@ app.use(
     saveUninitialized: true,
   })
 );
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(flash());
 
 /* ------------------------------Global Variables------------------------------ */
 app.use((req, res, next) => {
   res.locals.successMssg = req.flash("successMssg");
   res.locals.errorMssg = req.flash("errorMssg");
+  res.locals.error = req.flash("error");
   next();
 });
 
