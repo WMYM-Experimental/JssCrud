@@ -28,7 +28,6 @@ usersController.renderSignUp = async (req, res) => {
     const userEmail = await User.findOne({ email: email });
     if (userEmail) {
       req.flash("errorMssg", "Email already in use.");
-      console.log("------------ERROR---------------");
       res.redirect("/users/signup");
     } else {
       // Saving a New User
@@ -52,7 +51,10 @@ usersController.renderLogin = passport.authenticate("local", {
 });
 
 usersController.renderLogout = (req, res) => {
-  res.send("log out");
+  req.logout();
+  res.user = null;
+  req.flash("successMssg", "You are Logged out");
+  res.redirect("/users/signup");
 };
 
 module.exports = usersController;

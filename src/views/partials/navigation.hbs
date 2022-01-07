@@ -10,10 +10,15 @@
     </span>
   </div>
   {{!-- navigation links --}}
+  {{#if user}}
   <div class="navbar__links">
-    <a href="/about" class="links des-links">About</a>
     <a href="/notes/create" class="links des-links">Create</a>
-    <a href="/notes" class="links des-links">My Notes</a>
+    <a href="/notes" class="links des-links">Read</a>
     <a href="/" class="links des-links">Log Out</a>
   </div>
+  {{else}}
+  <div class="navbar__links">
+    <a href="/about" class="links des-links">About</a>
+  </div>
+  {{/if}}
 </header>
