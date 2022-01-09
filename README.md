@@ -40,3 +40,13 @@ But thats the point to experiment and see what i can do in the future with the t
 And then in another project i could do something entirely by my own like in the past with "FirstTryWebsite" and "Art-Human-Expression-Communication_Portfolio"
 
 It is my first time working on backend.
+
+### Samples Images
+
+#### Home
+
+![](Samples/Home.jpeg)
+
+#### Read
+
+![](Samples/Read.jpeg)
