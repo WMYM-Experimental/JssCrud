@@ -45,8 +45,8 @@ It is my first time working on backend.
 
 #### Home
 
-![](Samples/Home.jpeg)
+![](samples/home.jpeg)
 
 #### Read
 
-![](Samples/Read.jpeg)
+![](samples/read.jpeg)
